@@ -1,0 +1,26 @@
+body {
+    padding:25px;
+}
+
+footer {
+    margin-top:50px;
+}
+
+.alert, .btn {
+    margin-top:10px;
+}
+
+
+label, legend {
+    display:block;
+    margin-top:20px;
+    margin-bottom:0;
+}
+
+input, textarea, select {
+    display:block;
+}
+
+input[type='checkbox'], input[type='radio'] {
+    display:inline;
+}
