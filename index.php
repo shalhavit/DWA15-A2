@@ -1,13 +1,12 @@
 <?php require('php/getTweetEngine.php'); ?>
 
 <!doctype html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Tweet Inspector | DWA15 Assignment 2</title>
-        <meta charset='utf-8' />
 
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css'>
@@ -66,7 +65,7 @@
                     <div class="row">
 
                         <?php if ($filter): ?>
-                            <h3 class="text-center alert <?=$alertType?>" role="alert">
+                            <h3 class="text-center alert <?=$alertType?>">
                                 <?=$labelResponse ?>
                             </h3>
 
@@ -76,7 +75,7 @@
                                     <?php
                                     if (isset($tweet['entities']['media'])) {
                                         $media_url = $tweet['entities']['media'][0]['media_url'];
-                                        echo "<img class='img-rounded img_b_padding' src='{$media_url}' width='100px' />";
+                                        echo "<img class='img-rounded img_b_padding' src='{$media_url}' alt='Twitter thumb' style='width:100px' />";
                                     }
                                     ?>
 
@@ -93,7 +92,7 @@
                                     <?php
                                     if (isset($tweet['entities']['media'])) {
                                         $media_url = $tweet['entities']['media'][0]['media_url'];
-                                        echo "<img class='img-rounded img_b_padding' src='{$media_url}' width='100px' />";
+                                        echo "<img class='img-rounded img_b_padding' src='{$media_url}'  alt='Twitter thumb' style='width:100px' />";
                                     }
                                     ?>
                                     <p class="text-info"><?=$tweet['text']?></p>
