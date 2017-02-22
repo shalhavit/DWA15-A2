@@ -74,8 +74,8 @@
                                     <h6 class="small text-success"><?=$tweet['created_at']?></h6>
                                     <?php
                                     if (isset($tweet['entities']['media'])) {
-                                        $media_url = $tweet['entities']['media'][0]['media_url'];
-                                        echo "<img class='img-rounded img_b_padding' src='{$media_url}' alt='Twitter thumb' style='width:100px' />";
+                                        $mediaURL = $tweet['entities']['media'][0]['media_url'];
+                                        echo "<img class='img-rounded img_b_padding' src='{$mediaURL}' alt='Twitter thumb' style='width:100px' />";
                                     }
                                     ?>
 
@@ -91,8 +91,8 @@
                                     <h6 class="small text-success"><?=$tweet['created_at']?></h6>
                                     <?php
                                     if (isset($tweet['entities']['media'])) {
-                                        $media_url = $tweet['entities']['media'][0]['media_url'];
-                                        echo "<img class='img-rounded img_b_padding' src='{$media_url}'  alt='Twitter thumb' style='width:100px' />";
+                                        $mediaURL = $tweet['entities']['media'][0]['media_url'];
+                                        echo "<img class='img-rounded img_b_padding' src='{$mediaURL}'  alt='Twitter thumb' style='width:100px' />";
                                     }
                                     ?>
                                     <p class="text-info"><?=$tweet['text']?></p>
