@@ -39,19 +39,19 @@ $oauth_token_secret = "3bxCHxJihBb57lQBV6ncjoU3w4gAYicr5gdtIDPxoWdCN";
 
 $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $oauth_token, $oauth_token_secret);
 
-$user_timeline = $connection->get('statuses/home_timeline', array('count' => $numTweets));
+$userTimeline = $connection->get('statuses/home_timeline', array('count' => $numTweets));
 
 if (isset($_GET['filter']) and ($_GET['filter']!= '')) {
     $filter = $_GET['filter'];
-    $user_timeline = $connection->get('search/tweets', array('q' => $filter, 'count' => $numTweets));
-    $array_user_timeline = json_decode(json_encode($user_timeline->statuses), true);
+    $userTimeline = $connection->get('search/tweets', array('q' => $filter, 'count' => $numTweets));
+    $arrayUserTimeline = json_decode(json_encode($userTimeline->statuses), true);
 }
 else {
     $filter = '';
-    $array_user_timeline = json_decode(json_encode($user_timeline), true);
+    $arrayUserTimeline = json_decode(json_encode($userTimeline), true);
 }
 
-if(count($array_user_timeline) == 0) {
+if(count($arrayUserTimeline) == 0) {
     $alertType = 'alert-danger';
     $labelResponse = 'User not found or without tweets published';
 } else {

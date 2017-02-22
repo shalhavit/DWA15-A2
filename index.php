@@ -69,7 +69,7 @@
                                 <?=$labelResponse ?>
                             </h3>
 
-                            <?php foreach ($array_user_timeline as $tstatus => $tweet): ?>
+                            <?php foreach ($arrayUserTimeline as $tstatus => $tweet): ?>
                                 <div>
                                     <h6 class="small text-success"><?=$tweet['created_at']?></h6>
                                     <?php
@@ -85,7 +85,7 @@
                             <?php endforeach; ?>
 
                         <?php else: ?>
-                            <?php foreach ($array_user_timeline as $publish => $tweet): ?>
+                            <?php foreach ($arrayUserTimeline as $publish => $tweet): ?>
                                 <div>
                                     <h4><?=$tweet['user']['name']?></h4>
                                     <h6 class="small text-success"><?=$tweet['created_at']?></h6>
