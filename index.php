@@ -24,13 +24,13 @@
 
                 <div class="sidebar col col-lg-3">
                     <form method="GET">
-
-                        <label for="filter">Filter by user:</label>
+                        <h2 class="text-center">Controls</h2>
+                        <br/>
+                        <label for="filter">User:</label>
                         <input type="text" name="filter" id="filter" value="<?=sanitize($filter) ?>">
                         <br/>
                         <br/>
                         <label for='numTweets'>Max. number of tweets:</label>
-                        <br/>
                         <br/>
                         <select name='numTweets' id='numTweets'>
                             <option value='choose'>Choose one...</option>
@@ -48,7 +48,7 @@
 
                         <br/>
                         <br/>
-                        <input type="submit" class="btn btn-primary" value="Submit">
+                        <input type="submit" class="btn btn-primary" value="Search">
                     </form>
 
                     <div class="col col-lg-9">
