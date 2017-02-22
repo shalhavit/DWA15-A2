@@ -31,23 +31,14 @@ function getConnectionWithAccessToken($oauth_token, $oauth_token_secret) {
 
 /* Credentials*/
 /** Set access tokens here - see: https://dev.twitter.com/apps/ **/
-// define('CONSUMER_KEY', '6Zc3z8ZQ0W32EHKsarnutUiP8');
-// define('CONSUMER_SECRET', 'Ux9smFppL2nRfzgd5E5u8MxFw14DrNQ3MDAaBWT7U5LXhJavyr');
-// $oauth_token = "740315600-eBNa0g4eKdmghiHetwvdllXzkLFS0Tc9vVzgq8gl";
-// $oauth_token_secret = "iLAEXItdFdEJa34C7nvrkAOzUHKwGOT3tZ2mEG5WsuGOm";
 
-define('CONSUMER_KEY', 'e9P4iCeCWD4a6Lp8oHh7gRK6t');
-define('CONSUMER_SECRET', 'fDIAbecxazDtl4g32juRLSdUUDGio2xBUL8DWBzs7Wxr74RbyH');
-$oauth_token = "99417201-PwydObaVey6cfTUksMoPcT6XttgNiJXKxxrLvph3k";
-$oauth_token_secret = "1gxt4CXeUAYgCgMnuJq1h2tOpdPB78GrhjRjZGvveJ6Jw";
+define('CONSUMER_KEY', 'UV3AWLJwI3j8oG4tPe8hSScF8');
+define('CONSUMER_SECRET', 'phx2hLunL0z35Pn9LdPddsERJF1sifRR0e5GL5FSuPcwZLv6xe');
+$oauth_token = "47572670-JD710GMVYP5BQkbQ9orUieBsd35Q4xf5XlL0RwUEC";
+$oauth_token_secret = "3bxCHxJihBb57lQBV6ncjoU3w4gAYicr5gdtIDPxoWdCN";
 
 $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $oauth_token, $oauth_token_secret);
 
-// $content = $connection->get("account/verify_credentials");
-// dump($content);
-
-// $followers = $connection->get("followers/list");
-// dump($followers);
 $user_timeline = $connection->get('statuses/home_timeline', array('count' => $numTweets));
 
 if (isset($_GET['filter']) and ($_GET['filter']!= '')) {
