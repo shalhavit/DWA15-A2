@@ -23,34 +23,38 @@
 
                 <div class="sidebar col col-lg-3">
                     <form method="GET">
-                        <h2 class="text-center">Controls</h2>
-                        <br/>
-                        <label for="filter">User:</label>
-                        <input type="text" name="filter" id="filter" value="<?=sanitize($filter) ?>">
-                        <br/>
-                        <br/>
-                        <label for='numTweets'>Max. number of tweets:</label>
-                        <br/>
-                        <select name='numTweets' id='numTweets'>
-                            <option value='choose'>Choose one...</option>
-                            <option value='1' <?php if($numTweets == '1') echo 'SELECTED'?>>1</option>
-                            <option value='2' <?php if($numTweets == '2') echo 'SELECTED'?>>2</option>
-                            <option value='3' <?php if($numTweets == '3') echo 'SELECTED'?>>3</option>
-                            <option value='4' <?php if($numTweets == '4') echo 'SELECTED'?>>4</option>
-                            <option value='5' <?php if($numTweets == '5') echo 'SELECTED'?>>5</option>
-                            <option value='6' <?php if($numTweets == '6') echo 'SELECTED'?>>6</option>
-                            <option value='7' <?php if($numTweets == '7') echo 'SELECTED'?>>7</option>
-                            <option value='8' <?php if($numTweets == '8') echo 'SELECTED'?>>8</option>
-                            <option value='9' <?php if($numTweets == '9') echo 'SELECTED'?>>9</option>
-                            <option value='10' <?php if($numTweets == '10') echo 'SELECTED'?>>10</option>
-                        </select>
+                        <h2 class="text-center">Search user</h2>
+                        <div class="extra_padding_all">
+                            <label for="filter">User:</label>
+                            <input type="text" name="filter" id="filter" value="<?=sanitize($filter) ?>">
+                        </div>
 
-                        <br/>
-                        <br/>
-                        <input type="submit" class="btn btn-primary" value="Search">
+                        <div class="col col-lg-12 extra_padding">
+                            <label for='numTweets'>Max. number of tweets:</label>
+
+                            <select name='numTweets' id='numTweets'>
+                                <option value='choose'>Choose one...</option>
+                                <option value='1' <?php if($numTweets == '1') echo 'SELECTED'?>>1</option>
+                                <option value='2' <?php if($numTweets == '2') echo 'SELECTED'?>>2</option>
+                                <option value='3' <?php if($numTweets == '3') echo 'SELECTED'?>>3</option>
+                                <option value='4' <?php if($numTweets == '4') echo 'SELECTED'?>>4</option>
+                                <option value='5' <?php if($numTweets == '5') echo 'SELECTED'?>>5</option>
+                                <option value='6' <?php if($numTweets == '6') echo 'SELECTED'?>>6</option>
+                                <option value='7' <?php if($numTweets == '7') echo 'SELECTED'?>>7</option>
+                                <option value='8' <?php if($numTweets == '8') echo 'SELECTED'?>>8</option>
+                                <option value='9' <?php if($numTweets == '9') echo 'SELECTED'?>>9</option>
+                                <option value='10' <?php if($numTweets == '10') echo 'SELECTED'?>>10</option>
+                            </select>
+                        </div>
+
+                        <div class="text-center">
+                            <input type="submit" class="btn btn-lg btn-primary" value="Search user">
+                        </div>
                     </form>
 
-                    <div class="col col-lg-9">
+                    <hr/>
+
+                    <div class="col col-lg-12 text-center">
                         <br/>
                         <?php if (!$valid): ?>
                             <p class="text-center alert alert-danger extra_padding_all" role="alert">
