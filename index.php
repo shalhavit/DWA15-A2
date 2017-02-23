@@ -61,7 +61,7 @@
                 </div> <!-- sidebar -->
 
                 <section class="main col col-lg-9">
-                    <h2 class="text-center">Tweets Timeline</h2>
+                    <h2 class="text-center">Last week tweets timeline</h2>
                     <div class="row">
 
                         <?php if ($filter): ?>
